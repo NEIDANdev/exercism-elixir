@@ -4,7 +4,8 @@ defmodule SecretsTest do
   describe "secret_add" do
     @tag task_id: 1
     test "add 3" do
-      assert Secrets.secret_add(3).(3) === 6
+      add = Secrets.secret_add(3)
+      assert add.(3) === 6
     end
 
     @tag task_id: 1
